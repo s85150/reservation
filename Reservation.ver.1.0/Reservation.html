@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pai Animal Communication</title>
+    <meta http-equiv="X-UA-compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="animal communication copy right">
+    <meta name="author" content="ahao">
+    <!--[if lt IE 9]>
+		    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<![endif]-->
+    <!--Icon-->
+    <link rel="shortcut icon" href="https://dl.getdropbox.com/s/c9nt1dm0jh67f5u/favicon3.ico">
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">
+    <!--Fix Css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://dl.getdropbox.com/s/mcns8siqul26vhf/jquery-ui.min.css">
+    <!--Fix JavaScript-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://dl.getdropbox.com/s/1z5y4ubk1jy3y7n/jquery.file-preview.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script src="https://dl.getdropbox.com/s/4olze9xd8x84iy9/jquery-ui.min.js"></script>
+    <!--Handmade Css and JavaScript-->
+    <link rel="stylesheet" href="https://dl.getdropbox.com/s/8v1287oujh9px51/Reservation.css">
+    <script src="https://dl.getdropbox.com/s/y98dp8ox4z4hwky/Reservation.js"></script>
+
+<script>
+var numUploads = {};
+numUploads.done = 0;
+numUploads.total = 0;
+
+$(document).ready(function() {
+  $('#files').change(function(event){
+    //Filelist Object
+    var filelist = event.target.files;
+    var str = "";
+    for(var i = 0; i < filelist.length ; i++ ) {
+      var file = filelist[i]
+      $('input[name="FileName' + i + '"]').val(file.name); //帶出檔名
+    }
+  });
+});
+</script>
+ <script>
+$(function() {
+    //23-jQuery datepicker 事件 beforeShow beforeShowDay
+    $("#datepicker").datepicker({
+      //設定日期格式
+      dateFormat : "yy/mm/dd",
+      //顯示日曆框前要做的事，對input 物件操作
+      beforeShow : fun1,
+      //顯示日曆框前要做的事，對日期操作
+      beforeShowDay : fun2
+    });
+    //function(Element imput,Object inst)
+    //Element input
+    //Object datepicker
+    function fun1(input, inst) {
+  $("#showDateBox").append("beforeShow");
+  $("#showDateBox").append("input"+input);
+  $("#showDateBox").append("inst"+inst);
+  console.log("beforeShow");
+  console.log("input",input);
+  console.log("inst",inst);
+    }
+
+    var array = [ "2017/04/13", "2017/04/14", "2017/04/15" ];
+    //本方法效果限制不可選的日期。(array中為不可選日期)
+    //function (Date date)
+    function fun2(date) {
+      var string = jQuery.datepicker.formatDate('yy/mm/dd', date);
+      console.log("beforeShowDay", string);
+      return [ array.indexOf(string) == -1 ]
+    }
+  });
+ </script>
+  </head>
+<body>
+    <div class="wrapper">
+      <div class="navbar">
+        <nav class="container">
+          <div class="navbarhead">
+            <!--img logo-->
+            <a href="#"><img class="logo hide-on-med-and-down" src="https://dl.getdropbox.com/s/m2t97xoakivh4yv/logo5.png"></a>
+          </div>
+          <div class="nav-wrapper">
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons icon"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></i></a>
+            <ul class="hide-on-med-and-down">
+              <div class="leftbar left">
+                <!--link homepage.html-->
+                <li><a href="https://script.google.com/macros/s/AKfycbz0TBCF0eyUcryeGn6wr5ZXca0aI9nqVitOpBlzDzcG42edfCE/exec">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Readme</a></li>
+              </div>
+              <div class="rightbar right">
+                <li><a href="#" class="ac">Reservation</a></li>
+                <li><a href="#">Contact</a></li>
+              </div>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+              <!--link homepage.html-->
+              <li><a href="https://script.google.com/macros/s/AKfycbz0TBCF0eyUcryeGn6wr5ZXca0aI9nqVitOpBlzDzcG42edfCE/exec">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Readme</a></li>
+              <li><a href="#" class="ac">Reservation</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="hide-on-med-and-down subtitle col s12 center">
+        <p>Pai Animal Communication</p>
+      </div>
+    </div>
+<div class="indexContent">
+<div class="container">
+<div class="content">
+  <form class="main" id="form" novalidate="novalidate" style="margin: 40px auto;">
+    <div id="forminner">
+    <div class="row valign-wrapper" style="margin-right:25%">
+      <div class="input-field col s12 m10 l8">
+        <input id="name" type="text" name="Name" class="validate" required="" aria-required="true">
+        <label for="name">姓名</label>
+      </div>
+    </div>
+    <div class="row valign-wrapper" style="margin-right:25%">
+      <div class="input-field col s12 m10 l8">
+        <input id="email" type="email" name="Email" class="validate" required="" aria-required="true">
+        <label for="email">Email Address</label>
+      </div>
+    </div>
+
+    <div class="row valign-wrapper" style="margin-right:25%">
+      <div class="input-field col s12 m10 l8">
+        <input id="FBnameInput" type="text" name="fbname" class="validate" required="" aria-required="true">
+        <label for="FBnameInput">FB名稱</label>
+      </div>
+    </div>
+    <div class="row valign-wrapper" style="margin-right:25%">
+      <div class="input-field col s12 m10 l8">
+        <input id="animalInput" type="text" name="Animal" class="validate" required="" aria-required="true">
+        <label for="animalInput">毛小孩數量/種類</label>
+      </div>
+    </div>
+
+    <div class="row valign-wrapper" style="margin-right:25%">
+      <div class="input-field col s12 m10 l8">
+        <input id="othersInput" type="text" name="Others" class="validate" required="" aria-required="true">
+        <label for="othersInput">備註</label>
+      </div>
+    </div>
+
+       <div class="row valign-wrapper" style="margin-right:25%">
+      <div class="input-field col s12 m10 l8">
+        <input id="datepicker" type="text" name="datePicker" class="validate" required="" aria-required="true">
+        <label for="datepicker">預約時間</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="file-field input-field col s12">
+        <div class="btn">
+          <span>照片</span>
+          <input accept="image/*" class="upload" id="files" name="files" type="file" multiple>
+        </div>
+        <div class="file-path-wrapper">
+         <input id="filePath" class="file-path validate" type="text" placeholder="檔案名稱：例:左邊第二隻是阿喵">
+        </div>
+      </div>
+      <!--這裡開始是preview圖片的部分-->
+    <div class="row" id="image">
+      <div class="col s12 m6 l4">
+        <div class="imagecontainer">
+          <div class="imagewrapper">
+            <div class="img"></div>
+          </div>
+        </div>
+        <div class="collection waves-color-demo">
+          <div class="collection-item" id="imagecontent">
+            <input id="fileName0" type="text" name="FileName0" class="secondary-content" required="" aria-required="true">
+            </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="imagecontainer">
+          <div class="imagewrapper">
+            <div class="img"></div>
+          </div>
+        </div>
+        <div class="collection waves-color-demo">
+          <div class="collection-item" id="imagecontent">
+            <input id="fileName1" type="text" name="FileName1" class="secondary-content" required="" aria-required="true">
+            </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="imagecontainer">
+          <div class="imagewrapper">
+            <div class="img"></div>
+          </div>
+        </div>
+        <div class="collection waves-color-demo">
+          <div class="collection-item" id="imagecontent">
+            <input id="fileName2" type="text" name="FileName2" class="secondary-content" required="" aria-required="true">
+            </div>
+        </div>
+      </div>
+    </div>
+    <!--這裡是preview圖片的部分的結尾-->
+    <div class="collection waves-color-demo">
+      <div class="collection-item">
+        <p id="description">
+        <ol>
+        <li>Pai animal communication(下稱Pai)因管理相關事務，須蒐集您的相關資料(姓名、電話。)，並提供作為預約溝通之管理，該資料僅限預約溝通使用，作為溝通師相關業務聯繫、管理、資料統計之用。</li>
+        <li>您得依個人資料保護法第3條規定向Pai就您的個人資料行使請求查詢、閱覽、複製、補充、更正及請求停止蒐集、處理、利用及請求刪除等權利。</li>
+        <li>以上資料您得自由選擇是否提供，但如您提的資料不完全，Pai將無法提供預約溝通服務</li>
+        </ol>
+        </p>
+      </div>
+    </div>
+
+    <input type="checkbox" id="myCheckbox" class="filled-in" />
+    <label for="myCheckbox">我同意以上條款</label>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <button class="waves-effect waves-light btn submit-btn" type="submit" id="update" onclick="submitForm(); return false;">上傳檔案</button>
+      </div>
+    </div>
+    <!--return false是避免表單submit兩次的程式碼-->
+    <div class="row">
+      <div class="input-field col s12" id = "progress">
+      </div>
+    </div>
+    </div>
+    <div id="success" style="display:none">
+      <p>檔案上傳成功 ! 請繼續報名程序.</p>
+      <!--link to Pai's FaceBook-->
+      <p>點選 <a href="https://www.facebook.com/profile.php?id=100000344006180&fref=ts">預約溝通頁面.</a></p>
+    </div>
+  </form>
+
+  <p>I have no idea what i am doing,</p>
+  <p>but i like it.   : )</p>
+</div>
+</div>
+
+</div>
+<!--nav effect activator-->
+<script>
+$(document).ready(function(){
+  $(".button-collapse").sideNav();
+});
+</script>
+</body>
+</html>

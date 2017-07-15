@@ -1,0 +1,139 @@
+html, body{
+  height: 100%;
+  font-family: 'Love Ya Like A Sister', cursive;
+    background-color: #DFCDB4;
+}
+nav{
+  background-color: transparent;
+  color: #6B5D4D;
+  box-shadow: none;
+}
+.wrapper{
+  border-bottom: 3px solid #fff;
+  background-color: #B0A18F;
+  height: 240px;
+}
+.icon{
+  margin:30px 5px 5px 0px;
+}
+a.button-collapse{
+  margin-left: 0px;
+}
+.nav-wrapper{
+  background-color: transparent;
+  display: block;
+  margin:0px auto;
+}
+ul li a:hover{
+  background-color: transparent;
+  color:#DFCDB4;
+  border-bottom: 2px solid #DFCDB4;
+}
+.navbar{
+  position: relative;
+  background-color: transparent);
+}
+nav ul a{
+  font-size: 1.5rem;
+}
+.leftbar{
+  display: inline-block;
+}
+.leftbar a{
+  margin: 60px 20px 0px 0px;
+}
+.rightbar{
+  display: inline-block;
+}
+.rightbar a{
+  margin: 60px 0px 0px 20px;
+}
+.indexContent{
+  height: 3000px;
+  background-color: #fff;
+  border-top: 2px solid #fff;
+}
+p{
+  font-size: 4em;
+}
+div.subtitle{
+  position: absolute;
+  width: 100%;
+  top: 15%;
+  color: #fff;
+  font-size: 0.8em;
+}
+.navbarhead{
+position: absolute;
+top: 20px;
+}
+.logo{
+  width: 110px;
+  margin: 0 auto;
+  padding-top: 20px;
+  display: block;
+}
+.navbarhead {
+    width: 200px;
+    margin-left: -100px;
+    position: absolute;
+    left: 50%;
+    padding: 0;
+    font-size: 0px;
+    line-height: 1;
+}
+li a.ac{
+  color: #429398;
+}
+.content{
+  background-color: #fff;
+}
+.container .row {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.imagecontainer{
+  height: 213px;
+  position: relative;
+  max-width: 214px;
+  margin: 5px auto;
+}
+.imageWrapper{
+  width: 70%;
+  padding-bottom: 70%;
+  border-radius: 30%;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  transform: translate(-50%,-50%);
+}
+.imagewrapper img{
+  height: 105%;
+    width: initial;
+    max-height: 100%;
+    max-width: initial;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20%;
+    border: 3px solid #429398;
+}
+#image{
+    margin-left: -5.8rem;
+    margin-right: -5.8rem;
+}
+.img {
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 200px;
+    height: 200px;
+    background-color: #B0A18F;
+    float: left;
+    padding: 0;
+    margin: 10px;
+    border-radius: 3px;
+}
